@@ -14,32 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('notes',              'NotesController@index');
-Route::get('notes/create',       'NotesController@create');
-Route::post('notes/create',      'NotesController@store');
-Route::get('notes/delete/{note}',      'NotesController@delete');
-Route::get('notes/{note}',       'NotesController@show')->where('note', '[0-9]+');
-
-
-
-
-// Route::get('notes', function () {
-// 	return view('notes');
-// });
-
-// Route::post('notes', function () {
-// 	return 'Llegue el post';
-// });
-
-// // Route::get('notes', function () {
-// // 	return [
-// // 			'notes' => 'create',
-// // 			'notes2' => 'modificar'
-// // 		   ];
-// // });
-
-// Route::get('notes/{note}/{otro_param?}', function($note, $otro_param = null){ // El signo de interrogacion indica quue el parametro no es obligatorio
-// 	dd ($note, $otro_param);
-// })->where('note', '[0-9]+'); // Le indicacmos que el get note venga solo con numeros.
-

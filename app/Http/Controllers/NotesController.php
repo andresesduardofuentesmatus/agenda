@@ -19,8 +19,9 @@ class NotesController extends Controller
                             ->with('fecha', Carbon::now());
     }
 
-    public function create(){
-        return view('notes.create');
+    public function create($status = null){
+
+        return view('notes.create')->with('mensaje', $status);
     }
 
     public function store(Request $request){
@@ -30,7 +31,9 @@ class NotesController extends Controller
         $tblNote->note = $nota;
         $tblNote->save();
 
-        return back()->withInput()->with('mensaje', 'Ok');
+        $request->session()->flash('status', 'Task was successful!');
+
+        return back()->withInput();
     }
 
     public function delete($id){

@@ -18,6 +18,6 @@
 	<a href="{{ url('notes') }}">Volver</a>
 
 
-	Mensaje: Hola mundo
+	Mensaje: {{ $mensaje }}
 </body>
 </html>
