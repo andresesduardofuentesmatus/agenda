@@ -13,3 +13,8 @@
 
 Route::get('/','IndexController@index');
 Route::get('home','HomeController@index');
+
+/* Modal gestión de horas */
+Route::get('nuevaHora/{id}', function($id){
+  return "Agregar nueva Hora".$id;
+});
