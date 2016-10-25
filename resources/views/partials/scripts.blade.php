@@ -11,3 +11,11 @@
       Both of these plugins are recommended to enhance the
       user experience. Slimscroll is required when using the
       fixed layout. -->
+<!-- Full Calendar -->
+<script src="{{ asset('/plugins/fullcalendar/lib/moment.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/fullcalendar/fullcalendar.min.js') }}" type="text/javascript"></script>
+<script src="{{ asset('/plugins/fullcalendar/locale-all.js') }}" type="text/javascript"></script>
+
+
+<!-- My script -->
+<script src="{{ asset('/js/home.js') }}" type="text/javascript"></script>

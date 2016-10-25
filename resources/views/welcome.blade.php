@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Laravel</title>
-		
+
 		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
 		<style>
@@ -40,8 +40,8 @@
 	<body>
 		<div class="container">
 			<div class="content">
-				<div class="title">Laravel 5 with AdminLTE</div>
-				<div class="links"><a href="{{ route('auth.register') }}">Register</a> | <a href="{{ route('auth.login') }}">Login</a></div>
+				<div class="title"><img src="img/diente.png" alt="diente" class="img-rounded" /></div>
+				<div class="links"><a href="{{ route('auth.register') }}">Nuevo ussuario</a> | <a href="{{ route('auth.login') }}">Iniciar Sesión</a></div>
 			</div>
 		</div>
 	</body>
