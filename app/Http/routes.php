@@ -16,5 +16,8 @@ Route::get('home','HomeController@index');
 
 /* Modal gestión de horas */
 Route::get('nuevaHora/{id}', function($id){
-  return "Agregar nueva Hora".$id;
+
+  $string = "Agregar nueva Hora ".$id;
+
+  return view('formularios.verDetalleDeHoraAgendada')->with('respuesta', $string);
 });

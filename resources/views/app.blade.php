@@ -43,6 +43,8 @@ desired effect
         <section class="content">
             <!-- Your Page Content Here -->
             @yield('main-content')
+            <!-- Modal de la página -->
+
         </section><!-- /.content -->
     </div><!-- /.content-wrapper -->
 
@@ -50,6 +52,7 @@ desired effect
 
     @include('partials.footer')
 
+    <div id="incluir-modal"></div>
 </div><!-- ./wrapper -->
 
 @include('partials.scripts')

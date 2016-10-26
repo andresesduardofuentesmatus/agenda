@@ -9,16 +9,12 @@ $(document).ready(function(){
   				center: 'title',
   				right: 'listDay,listWeek'
   			},
-
-  			// customize the button names,
-  			// otherwise they'd all just say "list"
   			views: {
   				listDay: { buttonText: 'Dia' },
   				listWeek: { buttonText: 'Mes' }
   			},
         locale: 'es',
   			defaultView: 'listDay',
-  			//defaultDate: '2016-09-12',
   			navLinks: true, // can click day/week names to navigate views
   			editable: true,
   			eventLimit: true, // allow "more" link when too many events
@@ -41,10 +37,12 @@ $(document).ready(function(){
         eventClick: function(calEvent, jsEvent, view) {
 
           $.get('nuevaHora/'+calEvent.id, function(data){
-            $('.modal-body').html(data);
-            $('#myModal').modal();
+            $('#incluir-modal').html(data).promise().done(function(){
+              $('#myModal').modal();
+            })
+
           });
-          
+
         }
   		});
 
